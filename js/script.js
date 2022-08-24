@@ -4,7 +4,6 @@ const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
 ///////////////////// () //////////////////////////
-///////////////////// () //////////////////////////
 
 // make mobile nav work
 const btnNav = document.querySelector('.btn-mobile-nav');

@@ -1,82 +1,138 @@
-const h1 = document.querySelector('.heading-primary');
-const yearEl = document.querySelector('.year');
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
+const yearEl = document.querySelector(".year");
+const btnNav = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
+const sectionHeroEl = document.querySelector(".section-hero");
+const allLinks = document.querySelectorAll("a[href]");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const filterableItems = document.querySelectorAll("[data-category]");
+const impactCards = document.querySelectorAll(".impact-card");
+const impactButtons = document.querySelectorAll("[data-impact]");
+const impactTitleEl = document.querySelector("#impact-detail-title");
+const impactCopyEl = document.querySelector("#impact-detail-copy");
 
-///////////////////// () //////////////////////////
+const impactDetails = {
+  clients: {
+    title: "Client-scale product ownership",
+    copy:
+      "Owns the product lifecycle for data reporting and claims processing systems serving 690+ client companies, from ideation and requirements through execution, release, and iteration.",
+  },
+  funding: {
+    title: "Portfolio-level solution management",
+    copy:
+      "Operates as Solution Manager for multi-domain, multi-system initiatives, authoring solution documentation, SOPs, and stakeholder presentations for a portfolio collection valued over $8M in allocated technical funding.",
+  },
+  efficiency: {
+    title: "Operational efficiency through better systems",
+    copy:
+      "Helped deliver measurable business outcomes, including reducing resource utilization by 80% and improving team throughput through structured workflows and clearer prioritization.",
+  },
+  ai: {
+    title: "AI-assisted product and engineering workflows",
+    copy:
+      "Pioneered AI adoption within the PM organization by customizing BMAD, Claude, GPT, and Cursor workflows for product planning, documentation synthesis, and engineering execution.",
+  },
+  marines: {
+    title: "Leadership under operational pressure",
+    copy:
+      "Coordinated safety procedures and quality-controlled training for 64,800 Marines through the Martial Arts Instructor course, while also managing logistics and database responsibilities during active duty.",
+  },
+};
 
-// make mobile nav work
-const btnNav = document.querySelector('.btn-mobile-nav');
-const header = document.querySelector('header');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-btnNav.addEventListener('click', function () {
-  header.classList.toggle('nav-open');
-});
+if (btnNav && header) {
+  btnNav.addEventListener("click", () => {
+    header.classList.toggle("nav-open");
+  });
+}
 
-///////////////////// () //////////////////////////
-// SMooth scrolling
+allLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
 
-const allLinks = document.querySelectorAll('a:link');
-console.log(allLinks);
+    if (!href || (!href.startsWith("#") && href !== "#")) return;
 
-allLinks.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const href = link.getAttribute('href');
+    event.preventDefault();
 
-    //scroll back to top
-    if (href === '#')
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    // scroll to other links
-    if (href !== '#' && href.startsWith('#')) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: 'smooth' });
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    //close mobil nav
+    if (href !== "#") {
+      const sectionEl = document.querySelector(href);
+      if (sectionEl) sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
 
-    if (link.classList.contains('main-nav-link'))
-      header.classList.toggle('nav-open');
+    if (link.classList.contains("main-nav-link") && header) {
+      header.classList.remove("nav-open");
+    }
   });
 });
 
-///////////////////// (Stciky Navigation) //////////////////////////
-const sectionHeroEl = document.querySelector('.section-hero');
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    console.log(ent);
-    if (!ent.isIntersecting) document.body.classList.add('sticky');
-    if (ent.isIntersecting) document.body.classList.remove('sticky');
-  },
-  {
-    // In the view port
-    root: null,
-    threshold: 0,
-    rootMargin: '-80px',
-  }
-);
-obs.observe(sectionHeroEl);
-///////////////////// (Fixing flex box gap property missing in some Safari verions) //////////////////////////
-function checkFlexGap() {
-  var flex = document.createElement('div');
-  flex.style.display = 'flex';
-  flex.style.flexDirection = 'column';
-  flex.style.rowGap = '1px';
+if (sectionHeroEl) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      document.body.classList.toggle("sticky", !entry.isIntersecting);
+    },
+    {
+      root: null,
+      threshold: 0,
+      rootMargin: "-88px",
+    }
+  );
 
-  flex.appendChild(document.createElement('div'));
-  flex.appendChild(document.createElement('div'));
+  observer.observe(sectionHeroEl);
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const activeFilter = button.dataset.filter;
+
+    filterButtons.forEach((filterButton) => {
+      filterButton.classList.toggle("active", filterButton === button);
+    });
+
+    filterableItems.forEach((item) => {
+      const categories = item.dataset.category?.split(" ") || [];
+      const shouldHighlight =
+        activeFilter === "all" || categories.includes(activeFilter);
+
+      item.classList.toggle("is-dimmed", !shouldHighlight);
+    });
+  });
+});
+
+impactButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const detail = impactDetails[button.dataset.impact];
+    if (!detail || !impactTitleEl || !impactCopyEl) return;
+
+    impactCards.forEach((card) => {
+      card.classList.toggle("active", card.contains(button));
+    });
+
+    impactTitleEl.textContent = detail.title;
+    impactCopyEl.textContent = detail.copy;
+  });
+});
+
+function checkFlexGap() {
+  const flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
 
   document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
+  const isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
-  if (!isSupported)document.body.classList.add('no-flex-gap');
+  if (!isSupported) document.body.classList.add("no-flex-gap");
 }
-checkFlexGap();
 
-// http://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+checkFlexGap();

@@ -1,22 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Ivan's Portfolio"
+      content="Ivan Trejo Valle is a Technical Product Manager, Software Engineer, Technical Solution Manager, and Marine veteran focused on product strategy, data systems, AI-assisted workflows, and cross-functional delivery."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favicon.png" />
-    <link rel="apple-touch-icon" href="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link  
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
-    /> 
-    <link rel="stylesheet" href="css/general.css" /> 
+    />
+    <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <script
@@ -29,580 +28,359 @@
     ></script>
     <script
       defer
-      src="http://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="js/script.js"></script>
-    <script src="clock.js"></script>
-    <title>Welcome - Learn about My Journey!</title>
+    <title>Ivan Trejo Valle | Technical Product Manager & Software Engineer</title>
   </head>
   <body>
- 
-    <!-- open close -->
     <header class="header">
-      <a href="#">
-        <img class="logo" src="img/ivanslogo.jpg" alt="Top Logo" />
+      <a class="brand" href="#" aria-label="Ivan Trejo Valle home">
+        <img class="logo" src="img/ivanslogo.jpg" alt="Ivan Trejo Valle logo" />
+        <span>Ivan Trejo Valle</span>
       </a>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#how">My Journey</a></li>
-          <li><a href="#sites" class="main-nav-link">Created sites</a></li>
-          <li>
-            <a href="#certs" class="main-nav-link">Certificates/Languages</a>
-          </li>
-          <li><a href="#cta" class="main-nav-link nav-cta">Message me</a></li>
+          <li><a class="main-nav-link" href="#impact">Impact</a></li>
+          <li><a class="main-nav-link" href="#experience">Experience</a></li>
+          <li><a class="main-nav-link" href="#skills">Skills</a></li>
+          <li><a class="main-nav-link" href="#work">Work</a></li>
+          <li><a class="main-nav-link nav-cta" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <button class="btn-mobile-nav">
+      <button class="btn-mobile-nav" aria-label="Open navigation">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
     </header>
+
     <main>
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
+            <p class="eyebrow">Marine veteran turned technical product leader</p>
             <h1 class="heading-primary">
-              Welcome to Ivan's Portfolio
+              I turn complex technical work into clear product outcomes.
             </h1>
             <p class="hero-description">
-              "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times" -Bruce Lee
+              Technical Product Manager, Software Engineer, and Solution Manager
+              with 4+ years building data, claims, automation, and workflow
+              solutions across healthcare and military operations.
             </p>
-            <a href="#cta" class="btn btn--full margin--right-sm"
-              >Want to ask me a question?</a
-            >
-            <a href="#how" class="btn btn--outline">The Telling of my Journey &rarr;</a>
+            <div class="hero-actions">
+              <a href="#impact" class="btn btn--full">Explore impact</a>
+              <a
+                href="../Ivan_Trejo_Valle_Resume%20Final.pdf"
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener"
+                >View resume</a
+              >
+            </div>
           </div>
-          <div class="hero-img-box">
-            <img
-              src="img/programmer.gif"
-              class="hero-img"
-              alt="A Programmer typing"
-            />
+
+          <div class="hero-panel" aria-label="Professional highlights">
+            <div class="hero-card hero-card--featured">
+              <span class="metric-value">690+</span>
+              <span class="metric-label">client companies supported</span>
+            </div>
+            <div class="hero-card">
+              <span class="metric-value">$8M+</span>
+              <span class="metric-label">technical funding coordinated</span>
+            </div>
+            <div class="hero-card">
+              <span class="metric-value">80%</span>
+              <span class="metric-label">resource utilization reduction</span>
+            </div>
+            <div class="hero-card">
+              <span class="metric-value">8 yrs</span>
+              <span class="metric-label">United States Marine Corps</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Trying to implement clock to portfolion -->
-      <section class="clock">
-        <a href="http://127.0.0.1:5501/clock.html" class="btn-to-clock">clock</a>
-      </section>
-
-
-
-
-      <section class="section-featured">
+      <section class="section-filter" id="impact">
         <div class="container">
-          <h2 class="heading-featured-in"></h2>
-          <section class="section-how" id="how">
-            <div class="container">
-              <span class="subheading">My Career Path</span>
-              <h2 class="heading-secondary">
-                A Short Summary of how I am, and where I will be.
-              </h2>
-            </div>
-            <!-- step 1st -->
-            <div class="container grid grid--2-cols grid--center-v">
-              <div class="step-text-box">
-                <p class="step-number">2014-</p>
-                <h3 class="heading-tertiary">
-                  Military
-                </h3>
-                <p class="step-description">
-                  On June 12, 2014, only one week after I graduated Highschool. I was shipped off to MCRD Camp Pendleton to begin my first real career as a United States Marine. I worked endlessly for months to be the best version I could be; through discipline, determination, and enthusiasm, I grew to be someone I could be proud of. I received and earned the Military Occupational Specialty codes of 0341(Infantry Mortarman), 0916 (Martial Arts Instructor), 0933 (Marine Corps Combat Marksmanship Coach). I gained wisdom that I will carry long after my military career ends.
-                </p>
-              </div>
-              <div class="step-img-box">
-                <img
-                  src="img/Marine.jpg"
-                  class="step-img"
-                  alt="marine imgs"
-                />
-              </div>
-              <!-- step 2 -->
-              <div class="step-img-box">
-                <img
-                  class="step-img"
-                  id="hospital"
-                  src="img/hospital.jpg"
-                  alt="medical photo"
-                />
-              </div>
-              <div class="step-text-box">
-                <p class="step-number">2021</p>
-                <h3 class="heading-tertiary">A sudden Change of career path</h3>
-                <p class="step-description">
-                  Shortly After, I suffered some injuries to my knee and received my 2nd knee surgery. I was faced with the decision to end my military career and search for a new one that would challenge and push me being my own expectations. That is when I learned about coding and Udemy. I have studied intensely to prepare myself for the termination of my Active service. Faced with such a wide career turn, the path has been everything, but easy. And that is exactly what I wanted.
-                </p>
-              </div>
+          <div class="section-heading">
+            <span class="subheading">Interactive proof</span>
+            <h2 class="heading-secondary">Choose the lens that matters to you.</h2>
+            <p class="section-intro">
+              Recruiters, product leaders, and engineering teams scan for
+              different signals. Pick a focus and the portfolio highlights the
+              most relevant proof points.
+            </p>
+          </div>
 
-              <!-- step 3 -->
+          <div class="role-filter" aria-label="Filter achievements by role">
+            <button class="filter-btn active" data-filter="all">All impact</button>
+            <button class="filter-btn" data-filter="product">Technical PM</button>
+            <button class="filter-btn" data-filter="engineering">Engineering</button>
+            <button class="filter-btn" data-filter="data">Data & Analytics</button>
+            <button class="filter-btn" data-filter="ai">AI Automation</button>
+            <button class="filter-btn" data-filter="military">Military Leadership</button>
+          </div>
 
-              <div class="step-text-box">
-                <p class="step-number">2022</p>
-                <h3 class="heading-tertiary">
-                  Acceptance to Code Platoon
-                </h3>
-                <p class="step-description">
-                  I was very fortunate to have found Code Platoon, where I had a challenging time just by attempting the applications process. I have learned a lot while completing the prerequisites for my upcoming cohort starting in January. I hope to gain as much knowledge as possible, and to gain the experience to set myself on that next level of knowledge.
-                </p>
-              </div>
-              <div class="step-img-box">
-                <img
-                  src="img/codeplatoon.png"
-                  class="step-img"
-                  alt="Coding Bootcamp Image"
-                />
-              </div>
+          <div class="impact-console">
+            <div class="impact-card active" data-category="product data">
+              <button class="impact-card-button" data-impact="clients">
+                <span class="impact-number">690+</span>
+                <span class="impact-title">Client Companies</span>
+              </button>
             </div>
-          </section>
+            <div class="impact-card" data-category="product engineering">
+              <button class="impact-card-button" data-impact="funding">
+                <span class="impact-number">$8M+</span>
+                <span class="impact-title">Portfolio Funding</span>
+              </button>
+            </div>
+            <div class="impact-card" data-category="engineering data">
+              <button class="impact-card-button" data-impact="efficiency">
+                <span class="impact-number">80%</span>
+                <span class="impact-title">Utilization Reduction</span>
+              </button>
+            </div>
+            <div class="impact-card" data-category="ai product engineering">
+              <button class="impact-card-button" data-impact="ai">
+                <span class="impact-number">First</span>
+                <span class="impact-title">AI PM Framework</span>
+              </button>
+            </div>
+            <div class="impact-card" data-category="military data">
+              <button class="impact-card-button" data-impact="marines">
+                <span class="impact-number">64,800</span>
+                <span class="impact-title">Marines Supported</span>
+              </button>
+            </div>
+          </div>
 
-          <section class="section-sites" id="sites">
-            <div class="container center-text">
-              <span class="subheading">Sites created in classes</span>
-              <h2 class="heading-secondary">
-                Never Judge a Programmer by there Variable names
-              </h2>
-            </div>
-              <!--  First Site -->
-            <div class="container grid grid--3-cols margin-bottom-md">
-              <div class="site">
-                <img
-                  src="img/sites/clock site.png"
-                  class="site-img"
-                  alt="Clock site IMG"
-                />
-                <div class="site-content">
-                  <div class="site-tags">
-                    <span class="tag tag--Javascript ">Javascript</span>
-                    <span class="tag tag--Css ">CSS</span>
-                    <span class="tag tag--Html ">HTML</span>
-                  </div>
-                  <p class="site-title">Clock Site</p>
-                  <ul class="site-attributes">
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="time-outline"
-                      ></ion-icon>
-                      <span> <strong>30</strong> Min </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="code-slash-outline"
-                      ></ion-icon>
-                      <span
-                        >Complexity
-                        <strong>Low</strong>
-                      </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="at-outline"
-                      ></ion-icon>
-                      <span><strong>Udemy</strong></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Second Site -->
-              <div class="site">
-                <img
-                  src="img/sites/Choice site.png"
-                  class="site-img"
-                  alt="Clock site IMG"
-                />
-                <div class="site-content">
-                  <div class="site-tags">
-                    <span class="tag tag--Javascript ">Javascript</span>
-                    <span class="tag tag--Css ">CSS</span>
-                    <span class="tag tag--Html ">HTML</span>
-                  </div>
-                  <p class="site-title">Random Choice</p>
-                  <ul class="site-attributes">
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="time-outline"
-                      ></ion-icon>
-                      <span> <strong>1</strong> Hour </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="code-slash-outline"
-                      ></ion-icon>
-                      <span
-                        >Complexity
-                        <strong>Low</strong>
-                      </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="at-outline"
-                      ></ion-icon>
-                      <span><strong>Udemy</strong></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Third site -->
-              <div class="site">
-                <img
-                  src="img/sites/javaQuiz.png"
-                  class="site-img"
-                  alt="Clock site IMG"
-                />
-                <div class="site-content">
-                  <div class="site-tags">
-                    <span class="tag tag--Javascript ">Javascript</span>
-                    <span class="tag tag--Css ">CSS</span>
-                    <span class="tag tag--Html ">HTML</span>
-                  </div>
-                  <span class="tag tag--Git ">Github</span>
-                  <p class="site-title">Javascript Quiz</p>
-                  <ul class="site-attributes">
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="time-outline"
-                      ></ion-icon>
-                      <span> <strong>1</strong> Hour </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="code-slash-outline"
-                      ></ion-icon>
-                      <span
-                        >Complexity
-                        <strong>Low</strong>
-                      </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="at-outline"
-                      ></ion-icon>
-                      <span><strong>Udemy</strong></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Fourth site -->
-              <div class="site">
-                <img
-                  src="img/sites/omnisite.png"
-                  class="site-img"
-                  alt="Clock site IMG"
-                />
-                <div class="site-content">
-                  <div class="site-tags">
-                    <span class="tag tag--Javascript ">Javascript</span>
-                    <span class="tag tag--Css ">CSS</span>
-                    <span class="tag tag--Html ">HTML</span>
-                  </div>
-                  <p class="site-title">Clock Site</p>
-                  <ul class="site-attributes">
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="time-outline"
-                      ></ion-icon>
-                      <span> <strong>4+</strong> Hours </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="code-slash-outline"
-                      ></ion-icon>
-                      <span
-                        >Complexity
-                        <strong>Medium</strong>
-                      </span>
-                    </li>
-                    <li class="site-attribute">
-                      <ion-icon
-                        class="site-icon"
-                        name="at-outline"
-                      ></ion-icon>
-                      <span><strong>Udemy</strong></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="site">
-                <img
-                  src="img/construction.gif"
-                  class="site-img"
-                  alt="Clock site IMG"
-                />
-                <div class="site-content">
-                  <div class="site-tags">
-                  </div>
-                  <p class="site-title">Pending....</p>
-                </div>
-              </div>
-              </div>
-            </div>
-           
-          </section>
+          <article class="impact-detail" aria-live="polite">
+            <p class="impact-detail-kicker">Selected proof point</p>
+            <h3 id="impact-detail-title">Client-scale product ownership</h3>
+            <p id="impact-detail-copy">
+              Owns the product lifecycle for data reporting and claims processing
+              systems serving 690+ client companies, from ideation and
+              requirements through execution, release, and iteration.
+            </p>
+          </article>
         </div>
       </section>
-      <section class="section-certs grid" id="certs">
-        <div class="test-container">
-          <span class="subheading">Certificates I've acquired</span>
-          <h2 class="heading-secondary">Your Hunger for knowledge should be ever growing</h2>
+
+      <section class="section-experience" id="experience">
+        <div class="container">
+          <div class="section-heading">
+            <span class="subheading">Experience</span>
+            <h2 class="heading-secondary">
+              Product judgment backed by engineering execution.
+            </h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item" data-category="product engineering data ai">
+              <p class="timeline-date">Oct 2022 - Present</p>
+              <h3 class="heading-tertiary">
+                Technical Product Manager / Software Engineer / Solution Manager
+              </h3>
+              <p class="timeline-company">Cigna Healthcare</p>
+              <p>
+                Leads product lifecycle, backlog refinement, solution
+                documentation, stakeholder readouts, vendor coordination, and
+                technical advisory across data reporting and claims processing
+                systems.
+              </p>
+              <ul class="proof-list">
+                <li>Built an automated intake prioritization workflow in JIRA.</li>
+                <li>Coordinates multi-domain solution planning across teams and vendors.</li>
+                <li>Introduced repeatable AI-assisted PM and engineering workflows.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item" data-category="military data engineering">
+              <p class="timeline-date">2014 - 2022</p>
+              <h3 class="heading-tertiary">
+                United States Marine Corps and Technical Transition
+              </h3>
+              <p class="timeline-company">Operations, training, data, and software foundations</p>
+              <p>
+                Managed high-accountability logistics, federal database
+                administration, and training operations before completing Code
+                Platoon and mentoring new developers as a volunteer teaching
+                assistant.
+              </p>
+              <ul class="proof-list">
+                <li>Distributed 240,000+ rounds weekly to train 400 recruits.</li>
+                <li>Secured database information for 400+ military personnel.</li>
+                <li>Built full-stack apps with JavaScript, Python, React, Django, and PostgreSQL.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-skills" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="subheading">Skills</span>
+            <h2 class="heading-secondary">A bridge between strategy, systems, and delivery.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card" data-category="product">
+              <ion-icon name="map-outline"></ion-icon>
+              <h3>Product Strategy</h3>
+              <p>Roadmapping, requirements, user stories, PI planning, backlog refinement, release management.</p>
+            </article>
+            <article class="skill-card" data-category="engineering">
+              <ion-icon name="code-slash-outline"></ion-icon>
+              <h3>Engineering</h3>
+              <p>JavaScript, Python, SQL, HTML, CSS, Node.js, React, Django, SAS, system design.</p>
+            </article>
+            <article class="skill-card" data-category="data">
+              <ion-icon name="analytics-outline"></ion-icon>
+              <h3>Data & Analytics</h3>
+              <p>Databricks, Tableau, SQL Server, PostgreSQL, Oracle, Alation, data dictionaries.</p>
+            </article>
+            <article class="skill-card" data-category="ai">
+              <ion-icon name="sparkles-outline"></ion-icon>
+              <h3>AI & Automation</h3>
+              <p>Claude, GPT, Cursor, Copilot, BMAD, workflow automation, documentation synthesis.</p>
+            </article>
+            <article class="skill-card" data-category="military product">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+              <h3>Leadership</h3>
+              <p>Stakeholder trust, vendor coordination, risk communication, training, SOPs, delivery governance.</p>
+            </article>
+            <article class="skill-card" data-category="engineering data">
+              <ion-icon name="cloud-outline"></ion-icon>
+              <h3>Cloud & DevOps</h3>
+              <p>AWS Certified Cloud Practitioner, GitHub, GitBash, PuTTY, WinSCP, production release windows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-work" id="work">
+        <div class="container">
+          <div class="section-heading">
+            <span class="subheading">Selected work</span>
+            <h2 class="heading-secondary">Case studies and technical practice.</h2>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card" data-category="product data engineering">
+              <span class="tag tag--Product">Product</span>
+              <h3>Automated Intake Prioritization</h3>
+              <p>
+                Replaced an unscalable email-based vendor request process with a
+                structured JIRA workflow that improved visibility, response time,
+                and team throughput.
+              </p>
+            </article>
+            <article class="work-card" data-category="product engineering data">
+              <span class="tag tag--Data">Data</span>
+              <h3>Cross-Team File Exchange System</h3>
+              <p>
+                Coordinated vendors, internal teams, data flow diagrams, mappings,
+                and release windows for a multi-system data processing workflow.
+              </p>
+            </article>
+            <article class="work-card" data-category="ai product engineering">
+              <span class="tag tag--AI">AI</span>
+              <h3>AI-Assisted Product Workflow</h3>
+              <p>
+                Customized BMAD, Cursor, Claude, and GPT workflows into repeatable
+                planning, documentation, and execution patterns for product teams.
+              </p>
+            </article>
+            <article class="work-card" data-category="engineering">
+              <span class="tag tag--Engineering">Code</span>
+              <h3>Early Front-End Builds</h3>
+              <p>
+                JavaScript, HTML, and CSS practice projects that show the start of
+                the technical transition and the discipline behind continued growth.
+              </p>
+              <a class="inline-link" href="clock.html">View theme clock project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-certs" id="certs">
+        <div class="container certs-layout">
+          <div>
+            <span class="subheading">Certifications</span>
+            <h2 class="heading-secondary">Continuous learning, applied at work.</h2>
+          </div>
 
           <div class="certs">
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-                2021 Complete Python Bootcamp from Zero to Hero in Python
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-               Build Responsive Real-World Websites with HTML and CSS
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-               Advanced Javascript
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/amazon.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-                Amazon Certified Cloud Practitioner 
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-                Visual Studios Ultimate Course
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-                The Complete JavaScript Course 2021: From Zero to Expert!
-              </blockquote>
-              <p class="certs-name">-2021</p>
-            </figure>
-            <figure>
-              <img
-                class="certs-img"
-                src="img/Udemy.png"
-                alt="Photo"
-              />
-              <blockquote class="certs-text">
-                JavaScript: The Advanced Concepts (2022 Update)
-              </blockquote>
-              <p class="certs-name">-2022</p>
-            </figure>
+            <article class="cert-card">AWS Certified Cloud Practitioner</article>
+            <article class="cert-card">SAFe Agile Practitioner</article>
+            <article class="cert-card">Learn SQL - Codecademy</article>
+            <article class="cert-card">Advanced JavaScript Concepts</article>
+            <article class="cert-card">Complete JavaScript: Zero to Expert</article>
+            <article class="cert-card">Complete Python Bootcamp</article>
           </div>
-        </div>
-        <div class="gallery">
-          <figure class="gallery-item">
-            <img
-              src="img/Javalogo.png"
-              alt="JS logo"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/css3.png"
-              alt="Css Logos"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/html2.png"
-              alt="tech "
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/git.png"
-              alt="tech "
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/github.png"
-              alt="tech "
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/python.png"
-              alt="tech "
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/VS code.png"
-              alt="tech "
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/React.png"
-              alt="tech "
-            />
-          </figure>
-          <!--
-          Adding addition sites format  
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="img/gallery/gallery-12.jpg"
-              alt="tech"
-            />
-          </figure> -->
         </div>
       </section>
-      <!-- <section class="section-cta" id="cta">
-        <div class="container">
-          <div class="cta">
-            <div class="cta-text-box">
-              <h2 class="heading-secondary">If you would like to Email me directly. Fill the bottom. </h2>
-              <p class="cta-text">
-                I am always willing to recieve critism or to simple reach out and connect to any one with questions about my career. 
-              </p>
-              <form class="cta-form" name="sign-up" netlify>
-                <div>
-                  <label for="full-name">Full Name</label>
-                  <input
-                    id="full-name"
-                    type="text"
-                    name="full-name"
-                    placeholder="John Smith"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="email">Email Address</label>
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="me@email.com"
-                    required
-                  />
-                </div>
 
-                <div>
-                  <label for="select-where">What would you like to talk about?</label>
-                  <select id="select-where" name="select-where" required>
-                    <option value="">Please choose one option</option>
-                    <option value="friends">Potential Employment</option>
-                    <option value="Podcast">Have a Question</option>
-                    <option value="Facebook Ad">Can I get some advice</option>
-                    <option value="Television">You seem like a Rad dude.</option>
-                  </select>
-                </div>
-                <button class="btn btn--form">Hope to Hear from you</button>
-              </form>
-            </div>
-            <div
-              class="cta-img-box"
-              role="img"
-              aria-label="Code"
-            ></div>
+      <section class="section-contact" id="contact">
+        <div class="container contact-card">
+          <div>
+            <span class="subheading">Contact</span>
+            <h2 class="heading-secondary">Let’s build something operationally useful.</h2>
+            <p>
+              I’m interested in roles and conversations where product strategy,
+              engineering depth, AI-assisted delivery, and stakeholder trust all
+              matter.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn--full" href="mailto:Trejoivan258@gmail.com">Email Ivan</a>
+            <a
+              class="btn btn--outline"
+              href="https://www.linkedin.com/in/ivan-trejo-dev/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
-    <footer class="footer">
-      <div class="container grid grid--footer">
-        <div class="logo-col">
-          <a href="#" class="footer-logo">
-            <img class="logo" src="img/ivanslogo.jpg" alt="ivans logo" />
-          </a>
-          <ul class="social-links">
-            <li>
-              <a class="footer-link" href="https://www.instagram.com/ivantrejovalle/"
-                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a class="footer-link" href="https://www.facebook.com/ivan.trejo.507"
-                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a class="footer-link" href="https://www.linkedin.com/in/ivan-trejo-dev/"
-                ><ion-icon class='social-icon' name="logo-linkedin"></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a class="footer-link" href="https://www.linkedin.com/in/ivan-trejo-dev/"
-                ><ion-icon class='social-icon' name="logo-github"></ion-icon
-              ></a>
-            </li>
-          </ul>
 
-        </div>
-        <div class="address-col">
-          <p class="footer-heading">Contact me:</p>
-          <address class="contacts">
-            <p class="address">
-              Irvine, California
-            </p>
-            <p>
-              <a class="footer-link" href="tel:415-201-6370"></a
-              ><br />
-              <a class="footer-link" href="#"
-                >Trejoivan258@gmail.com</a
-              >
-            </p>
-          </address>
-        </div>
-        </nav>
-        <nav class="nav-col">
-          <p class="footer-heading">Resources</p>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="https://giphy.com/">Gifs</a></li>
-            <li><a class="footer-link" href="https://ionic.io/ionicons">icons</a></li>
-            <li><a class="footer-link" href="">Images</a></li>
-          </ul>
-        </nav>
+    <footer class="footer">
+      <div class="container footer-content">
+        <a class="brand footer-brand" href="#">
+          <img class="logo" src="img/ivanslogo.jpg" alt="Ivan Trejo Valle logo" />
+          <span>Ivan Trejo Valle</span>
+        </a>
+        <p>Technical Product Manager | Software Engineer | Marine Veteran</p>
+        <ul class="social-links">
+          <li>
+            <a
+              class="footer-link"
+              href="https://www.linkedin.com/in/ivan-trejo-dev/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Ivan Trejo Valle on LinkedIn"
+              ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              class="footer-link"
+              href="mailto:Trejoivan258@gmail.com"
+              aria-label="Email Ivan Trejo Valle"
+              ><ion-icon class="social-icon" name="mail-outline"></ion-icon
+            ></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          &copy; <span class="year"></span> Ivan Trejo Valle. Built with HTML,
+          CSS, and JavaScript.
+        </p>
       </div>
     </footer>
   </body>
